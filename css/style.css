@@ -15,6 +15,10 @@ body{
     margin-top: 40px;
 }
 
+.container-list{
+    display: flex;
+}
+
 ul{
     display: flex;
     flex-direction: column;
@@ -52,6 +56,10 @@ button{
     border: none;
 }
 
-.todo-done{
+.todo-done-true{
     text-decoration: line-through;
+}
+
+.todo-done-false{
+    text-decoration: none;
 }

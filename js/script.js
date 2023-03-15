@@ -42,6 +42,14 @@ const { createApp } = Vue
             this.todos.push(this.newTodo);
             this.newTodo = "";
         },
+
+        doneStatus(actualIndex) {
+            if(this.todos[actualIndex].done == false ){
+                this.todos[actualIndex].done = true;
+            } else {
+                this.todos[actualIndex].done = false;
+            }
+        },
     },
 
   }).mount('#app')

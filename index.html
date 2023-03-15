@@ -14,30 +14,27 @@
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 
     <div id="app">
+
         <div class="container">
 
             <ul>
-                <li v-for="(todo, index) in todos" :class="todo.done == true ? 'todo-done' : ''" >
-                    {{todo.text}}  <span><i @click="deleteTodo(index)" class="fa-solid fa-trash"></i></span>
-               </li>
+                <li v-for="(todo, index) in todos" :class="todo.done == true ? 'todo-done-true' : 'todo-done-false'" @click="doneStatus(index)">
+                    {{todo.text}}  <i @click="deleteTodo(index)" class="fa-solid fa-trash"></i>
+                </li>
             </ul>
 
             <div class="input-container">
+                
                 <input type="text" v-model="newTodo.text" @keyup.enter="addTodo()" placeholder="Inserisci todo">
                 
                 <div class="button-add">
-                    <button @click="addTodo()" >INSERISCI</button>
+                    <button @click="addTodo()">INSERISCI</button>
                 </div>
                 
             </div>
-
-
         </div>
 
-
-
     </div>
-
 
     <script type="text/javascript" src="js/script.js"></script>
 </body>
