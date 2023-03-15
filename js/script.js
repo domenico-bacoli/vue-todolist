@@ -40,8 +40,12 @@ const { createApp } = Vue
                 done: false
             }
 
-            this.todos.push(toDoObj);
-            this.newTodo= "";
+            if(this.newTodo == ""){
+                alert("Inserisci un valore nel campo di testo!!");
+            } else{
+                this.todos.push(toDoObj);
+                this.newTodo = "";
+            }
         },
 
         doneStatus(actualIndex) {
