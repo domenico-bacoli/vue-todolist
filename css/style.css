@@ -21,6 +21,12 @@ ul{
     gap: 30px;
 }
 
+i{
+    padding-left: 10px;
+    cursor: pointer;
+    color: rgb(80, 80, 80);
+}
+
 .input-container{
     display: flex;
     flex-direction: column;

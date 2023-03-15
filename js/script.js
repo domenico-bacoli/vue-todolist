@@ -34,10 +34,14 @@ const { createApp } = Vue
 
     methods: {
 
-        addTodo(){
+        deleteTodo(todoIndex) {
+            this.todos.splice(todoIndex, 1);
+        },
+
+        addTodo() {
             this.todos.push(this.newTodo);
             this.newTodo = "";
-        }
+        },
     },
 
   }).mount('#app')
