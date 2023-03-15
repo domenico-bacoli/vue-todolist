@@ -23,11 +23,7 @@ const { createApp } = Vue
             },
         ],
 
-        newTodo:
-            {
-                text: "",
-                done: false,
-            },
+        newTodo: "",
 
       } 
     },
@@ -39,8 +35,13 @@ const { createApp } = Vue
         },
 
         addTodo() {
-            this.todos.push(this.newTodo);
-            this.newTodo = "";
+            const toDoObj = {
+                text: this.newTodo,
+                done: false
+            }
+
+            this.todos.push(toDoObj);
+            this.newTodo= "";
         },
 
         doneStatus(actualIndex) {
